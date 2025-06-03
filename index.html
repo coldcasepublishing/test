@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cold Case Publishing - Where Mysteries Come to Life</title>
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="/static/favicon/favicon.ico">
+    <link rel="apple-touch-icon" href="/static/images/favicon.png">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="/static/images/logo.png" alt="Cold Case Publishing Logo">
+                <h1>COLD CASE PUBLISHING</h1>
+            </div>
+            <button id="menu-toggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/books">Books</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li class="cart-icon">
+                        <a href="/cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span id="cart-count" class="cart-count">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Where Mysteries Come to Life</h2>
+                <p>Discover gripping crime fiction from today's most compelling authors</p>
+                <a href="/books" class="btn">Explore Our Books</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Book Section -->
+    <section class="featured-book">
+        <div class="container">
+            <div class="featured-book-content">
+                <div class="featured-book-image">
+                    <img src="/static/images/books/echoes_in_the_ozarks.jpg" alt="Echoes in the Ozarks by Eric Wallace">
+                </div>
+                <div class="featured-book-info">
+                    <div class="section-header">
+                        <h2>Featured Release</h2>
+                    </div>
+                    <h3>Echoes in the Ozarks</h3>
+                    <p class="book-author">by Eric Wallace</p>
+                    <div class="book-series-badge">
+                        Book 1 of 4: The Ozarks Series
+                    </div>
+                    <p class="book-price">$24.99</p>
+                    <div class="book-description">
+                        <p>Deep in the misty mountains of the Ozarks, a decades-old mystery resurfaces when Detective Morgan Hayes returns to her hometown to investigate a series of disappearances that mirror those from her childhood.</p>
+                        <p>With atmospheric prose and nail-biting suspense, "Echoes in the Ozarks" is the first installment in Eric Wallace's gripping four-book series.</p>
+                    </div>
+                    <a href="/book-detail-echoes" class="btn">View Details</a>
+                    <button class="btn add-to-cart-btn" data-id="10">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Books Section -->
+    <section class="popular-books">
+        <div class="container">
+            <div class="section-header">
+                <h2>Popular Titles</h2>
+                <p>Discover our readers' favorite mysteries and thrillers</p>
+            </div>
+            <div class="books-carousel">
+                <div class="book-item">
+                    <div class="book-cover">
+                        <img src="/static/images/book1.jpg" alt="The Silent Witness">
+                    </div>
+                    <div class="book-details">
+                        <h3 class="book-title">The Silent Witness</h3>
+                        <p class="book-author">by J.D. Morgan</p>
+                        <p class="book-price">$19.99</p>
+                        <button class="btn add-to-cart-btn" data-id="1">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="book-item">
+                    <div class="book-cover">
+                        <img src="/static/images/book2.jpg" alt="Midnight Confession">
+                    </div>
+                    <div class="book-details">
+                        <h3 class="book-title">Midnight Confession</h3>
+                        <p class="book-author">by Eliza Blackwood</p>
+                        <p class="book-price">$21.99</p>
+                        <button class="btn add-to-cart-btn" data-id="2">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="book-item">
+                    <div class="book-cover">
+                        <img src="/static/images/book3.jpg" alt="The Last Detective">
+                    </div>
+                    <div class="book-details">
+                        <h3 class="book-title">The Last Detective</h3>
+                        <p class="book-author">by Marcus Reynolds</p>
+                        <p class="book-price">$18.99</p>
+                        <button class="btn add-to-cart-btn" data-id="3">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="book-item">
+                    <div class="book-cover">
+                        <img src="/static/images/book8.jpg" alt="Cold Trail">
+                    </div>
+                    <div class="book-details">
+                        <h3 class="book-title">Cold Trail</h3>
+                        <p class="book-author">by Rebecca Frost</p>
+                        <p class="book-price">$21.99</p>
+                        <button class="btn add-to-cart-btn" data-id="8">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center" style="text-align: center; margin-top: 2rem;">
+                <a href="/books" class="btn">View All Books</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="section-header">
+                        <h2>About Cold Case Publishing</h2>
+                    </div>
+                    <p>Cold Case Publishing was founded in 2020 by passionate crime fiction enthusiasts who saw a need for a publishing house dedicated exclusively to high-quality crime thrillers. What began as a small independent press has quickly grown into a respected name in the industry.</p>
+                    <p>Our mission is simple: to bring readers the most compelling crime fiction from established authors and emerging voices. We believe in the power of a well-crafted mystery to captivate, challenge, and entertain readers.</p>
+                    <a href="/about" class="btn">Learn More</a>
+                </div>
+                <div class="about-image">
+                    <img src="/static/images/about-office.jpg" alt="Cold Case Publishing Office">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Readers Are Saying</h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"A masterful blend of suspense and atmosphere. Wallace's debut in the Ozarks Series had me on the edge of my seat from start to finish. Can't wait for the next book!"</p>
+                    <p class="testimonial-author">- Sarah J., Goodreads</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="testimonial-text">"The atmospheric setting of the Ozarks becomes a character in itself. Wallace crafts a chilling mystery that will haunt you long after you've turned the last page."</p>
+                    <p class="testimonial-author">- Michael T., Book Reviewer</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Cold Case Publishing consistently delivers the most gripping crime fiction I've ever read. Their attention to detail and commitment to quality storytelling is unmatched."</p>
+                    <p class="testimonial-author">- Crime Fiction Weekly</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Stay Updated on New Releases</h2>
+                <p>Subscribe to our newsletter for updates on new books, author interviews, and exclusive offers.</p>
+                <form id="newsletter-form" class="newsletter-form">
+                    <input type="email" id="newsletter-email" placeholder="Your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+                <p class="privacy-note">We respect your privacy and will never share your information.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="/static/images/logo.png" alt="Cold Case Publishing Logo">
+                    <p>Where Mysteries Come to Life</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Goodreads"><i class="fab fa-goodreads-g"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/books">Books</a></li>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="/faq">FAQ</a></li>
+                        <li><a href="/shipping">Shipping & Returns</a></li>
+                        <li><a href="/privacy">Privacy Policy</a></li>
+                        <li><a href="/terms">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> coldcasepublishing@gmail.com</li>
+                        <li><i class="fas fa-phone"></i> (501) 313-3761</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Mystery Lane, Thriller City</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Cold Case Publishing. All rights reserved.</p>
+                <div class="payment-methods">
+                    <img src="/static/images/visa.png" alt="Visa">
+                    <img src="/static/images/mastercard.png" alt="Mastercard">
+                    <img src="/static/images/amex.png" alt="American Express">
+                    <img src="/static/images/paypal.png" alt="PayPal">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/static/js/main.js"></script>
+    <script src="/static/js/cart-handler.js"></script>
+</body>
+</html>
