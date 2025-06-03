@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Echoes in the Ozarks - Cold Case Publishing</title>
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="/static/favicon/favicon.ico">
+    <link rel="apple-touch-icon" href="/static/images/favicon.png">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="/static/images/logo.png" alt="Cold Case Publishing Logo">
+                <h1>COLD CASE PUBLISHING</h1>
+            </div>
+            <button id="menu-toggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/books">Books</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li class="cart-icon">
+                        <a href="/cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span id="cart-count" class="cart-count">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Book Detail Section -->
+    <section class="book-detail">
+        <div class="container">
+            <div class="book-detail-content">
+                <div class="book-detail-image">
+                    <img src="/static/images/books/echoes_in_the_ozarks.jpg" alt="Echoes in the Ozarks by Eric Wallace">
+                </div>
+                <div class="book-detail-info">
+                    <h1>Echoes in the Ozarks</h1>
+                    <p class="book-detail-author">by Eric Wallace</p>
+                    <div class="book-series-badge" style="display: inline-block; background-color: var(--dark-navy); color: var(--off-white); padding: 0.3rem 0.8rem; border-radius: 3px; margin-bottom: 1rem; font-family: var(--heading-font);">
+                        Book 1 of 4: The Ozarks Series
+                    </div>
+                    <p class="book-detail-price">$24.99</p>
+                    <div class="book-detail-description">
+                        <p>Deep in the misty mountains of the Ozarks, a decades-old mystery resurfaces when Detective Morgan Hayes returns to her hometown to investigate a series of disappearances that mirror those from her childhood. As she delves deeper into the case, she uncovers dark secrets that some in the small community would kill to keep buried.</p>
+                        <p>With atmospheric prose and nail-biting suspense, "Echoes in the Ozarks" is the first installment in Eric Wallace's gripping four-book series that explores the haunting power of the past and the lengths people will go to protect their secrets.</p>
+                    </div>
+                    <div class="book-detail-meta">
+                        <p><span>Series:</span> The Ozarks Series</p>
+                        <p><span>Book:</span> 1 of 4</p>
+                        <p><span>Pages:</span> 342</p>
+                        <p><span>ISBN:</span> 978-1-234567-89-0</p>
+                        <p><span>Publication Date:</span> June 2025</p>
+                        <p><span>Genre:</span> Crime Thriller</p>
+                    </div>
+                    <div class="quantity-control">
+                        <button class="quantity-btn minus">-</button>
+                        <span class="quantity">1</span>
+                        <button class="quantity-btn plus">+</button>
+                    </div>
+                    <button class="btn add-to-cart-btn" data-id="10">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Series Section -->
+    <section class="series-section" style="padding: 4rem 0; background-color: #f0f0f0;">
+        <div class="container">
+            <div class="section-header">
+                <h2>The Ozarks Series</h2>
+            </div>
+            <div class="series-description" style="max-width: 800px; margin: 0 auto 3rem; text-align: center;">
+                <p>Follow Detective Morgan Hayes through the misty mountains of the Ozarks as she unravels decades of mysteries and confronts the darkness that lurks beneath the surface of her seemingly peaceful hometown.</p>
+            </div>
+            <div class="books-carousel">
+                <div class="book-item current">
+                    <div class="book-cover">
+                        <img src="/static/images/books/echoes_in_the_ozarks.jpg" alt="Echoes in the Ozarks">
+                    </div>
+                    <div class="book-details">
+                        <h3 class="book-title">Echoes in the Ozarks</h3>
+                        <p class="book-author">by Eric Wallace</p>
+                        <p class="book-series">Book 1</p>
+                        <p class="book-price">$24.99</p>
+                        <button class="btn add-to-cart-btn" data-id="10">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="book-item coming-soon" style="opacity: 0.7;">
+                    <div class="book-cover" style="position: relative;">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); display: flex; justify-content: center; align-items: center; color: white; font-family: var(--heading-font); font-size: 1.2rem;">COMING SOON</div>
+                        <img src="/static/images/placeholder-cover.jpg" alt="Shadows in the Valley - Coming Soon">
+                    </div>
+                    <div class="book-details">
+                        <h3 class="book-title">Shadows in the Valley</h3>
+                        <p class="book-author">by Eric Wallace</p>
+                        <p class="book-series">Book 2</p>
+                        <p class="book-price">$24.99</p>
+                        <button class="btn secondary" disabled>Coming Soon</button>
+                    </div>
+                </div>
+                <div class="book-item coming-soon" style="opacity: 0.7;">
+                    <div class="book-cover" style="position: relative;">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); display: flex; justify-content: center; align-items: center; color: white; font-family: var(--heading-font); font-size: 1.2rem;">COMING SOON</div>
+                        <img src="/static/images/placeholder-cover.jpg" alt="Whispers in the Woods - Coming Soon">
+                    </div>
+                    <div class="book-details">
+                        <h3 class="book-title">Whispers in the Woods</h3>
+                        <p class="book-author">by Eric Wallace</p>
+                        <p class="book-series">Book 3</p>
+                        <p class="book-price">$24.99</p>
+                        <button class="btn secondary" disabled>Coming Soon</button>
+                    </div>
+                </div>
+                <div class="book-item coming-soon" style="opacity: 0.7;">
+                    <div class="book-cover" style="position: relative;">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); display: flex; justify-content: center; align-items: center; color: white; font-family: var(--heading-font); font-size: 1.2rem;">COMING SOON</div>
+                        <img src="/static/images/placeholder-cover.jpg" alt="Secrets of the Summit - Coming Soon">
+                    </div>
+                    <div class="book-details">
+                        <h3 class="book-title">Secrets of the Summit</h3>
+                        <p class="book-author">by Eric Wallace</p>
+                        <p class="book-series">Book 4</p>
+                        <p class="book-price">$24.99</p>
+                        <button class="btn secondary" disabled>Coming Soon</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews-section" style="padding: 4rem 0;">
+        <div class="container">
+            <div class="section-header">
+                <h2>Reader Reviews</h2>
+            </div>
+            <div class="reviews-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                <div class="review-card" style="background-color: white; padding: 1.5rem; border-radius: 5px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                    <div class="review-stars" style="color: var(--faded-yellow); margin-bottom: 1rem;">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text" style="font-style: italic; margin-bottom: 1rem;">"A masterful blend of suspense and atmosphere. Wallace's debut in the Ozarks Series had me on the edge of my seat from start to finish. Can't wait for the next book!"</p>
+                    <p class="review-author" style="font-weight: bold; text-align: right;">- Sarah J., Goodreads</p>
+                </div>
+                <div class="review-card" style="background-color: white; padding: 1.5rem; border-radius: 5px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                    <div class="review-stars" style="color: var(--faded-yellow); margin-bottom: 1rem;">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="review-text" style="font-style: italic; margin-bottom: 1rem;">"The atmospheric setting of the Ozarks becomes a character in itself. Wallace crafts a chilling mystery that will haunt you long after you've turned the last page."</p>
+                    <p class="review-author" style="font-weight: bold; text-align: right;">- Michael T., Book Reviewer</p>
+                </div>
+                <div class="review-card" style="background-color: white; padding: 1.5rem; border-radius: 5px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                    <div class="review-stars" style="color: var(--faded-yellow); margin-bottom: 1rem;">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text" style="font-style: italic; margin-bottom: 1rem;">"Detective Morgan Hayes is a compelling protagonist with depth and grit. 'Echoes in the Ozarks' is a promising start to what's sure to be a thrilling series."</p>
+                    <p class="review-author" style="font-weight: bold; text-align: right;">- Crime Fiction Weekly</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Books Section -->
+    <section class="related-books" style="padding: 4rem 0; background-color: #f0f0f0;">
+        <div class="container">
+            <div class="section-header">
+                <h2>You May Also Like</h2>
+            </div>
+            <div class="books-carousel">
+                <div class="book-item">
+                    <div class="book-cover">
+                        <img src="/static/images/book1.jpg" alt="The Silent Witness">
+                    </div>
+                    <div class="book-details">
+                        <h3 class="book-title">The Silent Witness</h3>
+                        <p class="book-author">by J.D. Morgan</p>
+                        <p class="book-price">$19.99</p>
+                        <button class="btn add-to-cart-btn" data-id="1">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="book-item">
+                    <div class="book-cover">
+                        <img src="/static/images/book3.jpg" alt="The Last Detective">
+                    </div>
+                    <div class="book-details">
+                        <h3 class="book-title">The Last Detective</h3>
+                        <p class="book-author">by Marcus Reynolds</p>
+                        <p class="book-price">$18.99</p>
+                        <button class="btn add-to-cart-btn" data-id="3">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="book-item">
+                    <div class="book-cover">
+                        <img src="/static/images/book8.jpg" alt="Cold Trail">
+                    </div>
+                    <div class="book-details">
+                        <h3 class="book-title">Cold Trail</h3>
+                        <p class="book-author">by Rebecca Frost</p>
+                        <p class="book-price">$21.99</p>
+                        <button class="btn add-to-cart-btn" data-id="8">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Stay Updated on New Releases</h2>
+                <p>Subscribe to our newsletter to receive updates on new books, author interviews, and exclusive offers.</p>
+                <form id="newsletter-form" class="newsletter-form">
+                    <input type="email" id="newsletter-email" placeholder="Your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+                <p class="privacy-note">We respect your privacy and will never share your information.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="/static/images/logo.png" alt="Cold Case Publishing Logo">
+                    <p>Where Mysteries Come to Life</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Goodreads"><i class="fab fa-goodreads-g"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/books">Books</a></li>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="/faq">FAQ</a></li>
+                        <li><a href="/shipping">Shipping & Returns</a></li>
+                        <li><a href="/privacy">Privacy Policy</a></li>
+                        <li><a href="/terms">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> info@coldcasepublishing.com</li>
+                        <li><i class="fas fa-phone"></i> (555) 123-4567</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Mystery Lane, Thriller City</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Cold Case Publishing. All rights reserved.</p>
+                <div class="payment-methods">
+                    <img src="/static/images/visa.png" alt="Visa">
+                    <img src="/static/images/mastercard.png" alt="Mastercard">
+                    <img src="/static/images/amex.png" alt="American Express">
+                    <img src="/static/images/paypal.png" alt="PayPal">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/static/js/main.js"></script>
+<script src="/static/js/cart-handler.js"></script>
+    <script>
+        // Quantity control functionality
+        const minusBtn = document.querySelector('.quantity-btn.minus');
+        const plusBtn = document.querySelector('.quantity-btn.plus');
+        const quantitySpan = document.querySelector('.quantity');
+        
+        minusBtn.addEventListener('click', function() {
+            let quantity = parseInt(quantitySpan.textContent);
+            if (quantity > 1) {
+                quantitySpan.textContent = quantity - 1;
+            }
+        });
+        
+        plusBtn.addEventListener('click', function() {
+            let quantity = parseInt(quantitySpan.textContent);
+            quantitySpan.textContent = quantity + 1;
+        });
+        
+        // Add to cart functionality
+        const addToCartBtn = document.querySelector('.add-to-cart-btn');
+        addToCartBtn.addEventListener('click', function() {
+            const bookId = this.dataset.id;
+            const quantity = parseInt(quantitySpan.textContent);
+            
+            // In a real application, we would add the book to the cart
+            // For this demo, we'll just show a success message
+            showNotification(`"Echoes in the Ozarks" added to cart (${quantity} copies)`, 'success');
+        });
+        
+        // Show notification function
+        function showNotification(message, type = 'info') {
+            const notification = document.createElement('div');
+            notification.className = `notification ${type}`;
+            notification.textContent = message;
+            
+            document.body.appendChild(notification);
+            
+            // Show notification
+            setTimeout(() => {
+                notification.classList.add('show');
+            }, 10);
+            
+            // Hide and remove notification after 3 seconds
+            setTimeout(() => {
+                notification.classList.remove('show');
+                setTimeout(() => {
+                    document.body.removeChild(notification);
+                }, 300);
+            }, 3000);
+        }
+    </script>
+</body>
+</html>

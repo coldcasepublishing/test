@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Cold Case Publishing</title>
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="/static/favicon/favicon.ico">
+    <link rel="apple-touch-icon" href="/static/images/favicon.png">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="/static/images/logo.png" alt="Cold Case Publishing Logo">
+                <h1>COLD CASE PUBLISHING</h1>
+            </div>
+            <button id="menu-toggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/books">Books</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li class="cart-icon">
+                        <a href="/cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span id="cart-count" class="cart-count">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- About Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>About Cold Case Publishing</h2>
+                <p>Dedicated to the art of suspense and mystery</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Content -->
+    <section class="about-page">
+        <div class="container">
+            <div class="about-page-content">
+                <h2>Our Story</h2>
+                <p>Cold Case Publishing was founded in 2020 by passionate crime fiction enthusiasts who saw a need for a publishing house dedicated exclusively to high-quality crime thrillers. What began as a small independent press has quickly grown into a respected name in the industry, known for discovering exceptional new talent and publishing gripping, page-turning stories.</p>
+                
+                <p>Our mission is simple: to bring readers the most compelling crime fiction from established authors and emerging voices. We believe in the power of a well-crafted mystery to captivate, challenge, and entertain readers, and we're committed to publishing books that do just that.</p>
+                
+                <div class="about-section-image">
+                    <img src="/static/images/about-office.jpg" alt="Cold Case Publishing Office">
+                </div>
+                
+                <h2>Our Philosophy</h2>
+                <p>At Cold Case Publishing, we believe that great crime fiction does more than entertain—it explores the complexities of human nature, challenges our perceptions, and keeps us turning pages late into the night. We're dedicated to finding stories that do all these things.</p>
+                
+                <p>We take pride in our meticulous editorial process, working closely with our authors to ensure each book reaches its full potential. From the initial manuscript to the final published work, we're committed to excellence at every stage.</p>
+                
+                <p>We also believe in building a community around our books. That's why we host regular events, book clubs, and author Q&As, creating spaces where readers can connect with the writers they love.</p>
+                
+                <div class="about-section-image">
+                    <img src="/static/images/book-signing.jpg" alt="Author Book Signing Event">
+                </div>
+                
+                <h2>Our Team</h2>
+                <p>Cold Case Publishing is made up of a small but dedicated team of professionals who are passionate about crime fiction. Everyone at Cold Case is committed to bringing the best possible books to our readers, from our editors and designers to our marketing and sales staff.</p>
+                
+                <div class="team-section">
+                    <div class="team-grid">
+                        <div class="team-member">
+                            <div class="team-member-image">
+                                <img src="/static/images/founder.png" alt="Eric Wallace - Founder and Editor at Cold Case Publishing">
+                            </div>
+                            <h4>Sarah Johnson</h4>
+                            <p>Founder & Publisher</p>
+                        </div>
+                        <div class="team-member">
+                            <div class="team-member-image">
+                                <img src="/static/images/michael-chen.png" alt="Michael Chen - Senior Editor at Cold Case Publishing">
+                            </div>
+                            <h4>Michael Chen</h4>
+                            <p>Senior Editor</p>
+                        </div>
+                        <div class="team-member">
+                            <div class="team-member-image">
+                                <img src="/static/images/team-3.jpg" alt="Olivia Rodriguez">
+                            </div>
+                            <h4>Olivia Rodriguez</h4>
+                            <p>Marketing Director</p>
+                        </div>
+                        <div class="team-member">
+                            <div class="team-member-image">
+                                <img src="/static/images/team-4.jpg" alt="David Thompson">
+                            </div>
+                            <h4>David Thompson</h4>
+                            <p>Design Lead</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <h2>Join Our Community</h2>
+                <p>We're always seeking new voices to join our growing family of authors. If you're a writer passionate about crime fiction, we'd love to hear from you. Check out our submissions page for more information on how to submit your manuscript.</p>
+                
+                <p> If you're a reader who loves a good mystery, sign up for our newsletter to stay up-to-date on new releases, author events, and exclusive offers.</p>
+                
+                <div class="text-center" style="text-align: center; margin-top: 2rem;">
+                    <a href="/contact" class="btn">Get in Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Stay Updated on New Releases</h2>
+                <p>Subscribe to our newsletter for updates on new books, author interviews, and exclusive offers.</p>
+                <form id="newsletter-form" class="newsletter-form">
+                    <input type="email" id="newsletter-email" placeholder="Your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+                <p class="privacy-note">We respect your privacy and will never share your information.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="/static/images/logo.png" alt="Cold Case Publishing Logo">
+                    <p>Where Mysteries Come to Life</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Goodreads"><i class="fab fa-goodreads-g"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/books">Books</a></li>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="/faq">FAQ</a></li>
+                        <li><a href="/shipping">Shipping & Returns</a></li>
+                        <li><a href="/privacy">Privacy Policy</a></li>
+                        <li><a href="/terms">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> coldcasepublishing@gmail.com</li>
+                        <li><i class="fas fa-phone"></i> (501) 313-3761</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Mystery Lane, Thriller City</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Cold Case Publishing. All rights reserved.</p>
+                <div class="payment-methods">
+                    <img src="/static/images/visa.png" alt="Visa">
+                    <img src="/static/images/mastercard.png" alt="Mastercard">
+                    <img src="/static/images/amex.png" alt="American Express">
+                    <img src="/static/images/paypal.png" alt="PayPal">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/static/js/main.js"></script>
+</body>
+</html>

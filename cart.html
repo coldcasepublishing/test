@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - Cold Case Publishing</title>
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="/static/favicon/favicon.ico">
+    <link rel="apple-touch-icon" href="/static/images/favicon.png">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="/static/images/logo.png" alt="Cold Case Publishing Logo">
+                <h1>COLD CASE PUBLISHING</h1>
+            </div>
+            <button id="menu-toggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/books">Books</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li class="cart-icon">
+                        <a href="/cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span id="cart-count" class="cart-count">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Cart Page Content -->
+    <section class="cart-page">
+        <div class="container">
+            <h1>Your Shopping Cart</h1>
+            
+            <div class="cart-content" style="display: grid; grid-template-columns: 2fr 1fr; gap: 2rem;">
+                <div class="cart-items">
+                    <!-- Sample cart item with Echoes in the Ozarks -->
+                    <div class="cart-item">
+                        <div class="cart-item-image">
+                            <img src="/static/images/books/echoes_in_the_ozarks.jpg" alt="Echoes in the Ozarks">
+                        </div>
+                        <div class="cart-item-details">
+                            <h4>Echoes in the Ozarks</h4>
+                            <p>by Eric Wallace</p>
+                            <p>$24.99 each</p>
+                            <div class="quantity-control">
+                                <button class="quantity-btn minus" data-id="10">-</button>
+                                <span class="quantity">1</span>
+                                <button class="quantity-btn plus" data-id="10">+</button>
+                            </div>
+                            <p class="subtotal">Subtotal: $24.99</p>
+                            <button class="remove-btn" data-id="10">Remove</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Sample cart item -->
+                    <div class="cart-item">
+                        <div class="cart-item-image">
+                            <img src="/static/images/book3.jpg" alt="The Last Detective">
+                        </div>
+                        <div class="cart-item-details">
+                            <h4>The Last Detective</h4>
+                            <p>by Marcus Reynolds</p>
+                            <p>$18.99 each</p>
+                            <div class="quantity-control">
+                                <button class="quantity-btn minus" data-id="3">-</button>
+                                <span class="quantity">1</span>
+                                <button class="quantity-btn plus" data-id="3">+</button>
+                            </div>
+                            <p class="subtotal">Subtotal: $18.99</p>
+                            <button class="remove-btn" data-id="3">Remove</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Empty cart message (hidden by default) -->
+                    <div id="empty-cart-message" style="display: none; text-align: center; padding: 3rem 0;">
+                        <i class="fas fa-shopping-cart" style="font-size: 3rem; color: #ccc; margin-bottom: 1rem;"></i>
+                        <h3>Your cart is empty</h3>
+                        <p>Looks like you haven't added any books to your cart yet.</p>
+                        <a href="/books" class="btn" style="margin-top: 1rem;">Browse Books</a>
+                    </div>
+                </div>
+                
+                <div class="cart-summary">
+                    <h3>Order Summary</h3>
+                    <div class="summary-row">
+                        <span>Subtotal (2 items)</span>
+                        <span>$43.98</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Shipping</span>
+                        <span>$5.99</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Tax</span>
+                        <span>$3.52</span>
+                    </div>
+                    <div class="summary-row summary-total">
+                        <span>Total</span>
+                        <span>$53.49</span>
+                    </div>
+                    <a href="/checkout" class="btn checkout-btn">Proceed to Checkout</a>
+                    <div class="payment-methods" style="margin-top: 1.5rem; text-align: center;">
+                        <p style="font-size: 0.9rem; margin-bottom: 0.5rem;">We accept</p>
+                        <div style="display: flex; justify-content: center; gap: 0.5rem;">
+                            <img src="/static/images/payment/visa.png" alt="Visa" style="height: 25px;">
+                            <img src="/static/images/payment/mastercard.png" alt="Mastercard" style="height: 25px;">
+                            <img src="/static/images/payment/amex.png" alt="American Express" style="height: 25px;">
+                            <img src="/static/images/payment/paypal.png" alt="PayPal" style="height: 25px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Books Section -->
+    <section class="related-books" style="padding: 4rem 0; background-color: #f0f0f0;">
+        <div class="container">
+            <div class="section-header">
+                <h2>You May Also Like</h2>
+            </div>
+            <div class="books-carousel">
+                <div class="book-item">
+                    <div class="book-cover">
+                        <img src="/static/images/book1.jpg" alt="The Silent Witness">
+                    </div>
+                    <div class="book-details">
+                        <h3 class="book-title">The Silent Witness</h3>
+                        <p class="book-author">by J.D. Morgan</p>
+                        <p class="book-price">$19.99</p>
+                        <button class="btn add-to-cart-btn" data-id="1">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="book-item">
+                    <div class="book-cover">
+                        <img src="/static/images/book2.jpg" alt="Midnight Confession">
+                    </div>
+                    <div class="book-details">
+                        <h3 class="book-title">Midnight Confession</h3>
+                        <p class="book-author">by Eliza Blackwood</p>
+                        <p class="book-price">$21.99</p>
+                        <button class="btn add-to-cart-btn" data-id="2">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="book-item">
+                    <div class="book-cover">
+                        <img src="/static/images/book8.jpg" alt="Cold Trail">
+                    </div>
+                    <div class="book-details">
+                        <h3 class="book-title">Cold Trail</h3>
+                        <p class="book-author">by Rebecca Frost</p>
+                        <p class="book-price">$21.99</p>
+                        <button class="btn add-to-cart-btn" data-id="8">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="/static/images/logo.png" alt="Cold Case Publishing Logo">
+                    <p>Where Mysteries Come to Life</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Goodreads"><i class="fab fa-goodreads-g"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/books">Books</a></li>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="/faq">FAQ</a></li>
+                        <li><a href="/shipping">Shipping & Returns</a></li>
+                        <li><a href="/privacy">Privacy Policy</a></li>
+                        <li><a href="/terms">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> coldcasepublishing@gmail.com</li>
+                        <li><i class="fas fa-phone"></i> (501) 313-3761</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Mystery Lane, Thriller City</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Cold Case Publishing. All rights reserved.</p>
+                <div class="payment-methods">
+                    <img src="/static/images/visa.png" alt="Visa">
+                    <img src="/static/images/mastercard.png" alt="Mastercard">
+                    <img src="/static/images/amex.png" alt="American Express">
+                    <img src="/static/images/paypal.png" alt="PayPal">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/static/js/main.js"></script>
+<script src="/static/js/cart-handler.js"></script>
+    <script>
+        // Quantity control functionality
+        const minusBtns = document.querySelectorAll('.quantity-btn.minus');
+        const plusBtns = document.querySelectorAll('.quantity-btn.plus');
+        const removeBtns = document.querySelectorAll('.remove-btn');
+        
+        minusBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const quantitySpan = this.nextElementSibling;
+                let quantity = parseInt(quantitySpan.textContent);
+                if (quantity > 1) {
+                    quantity--;
+                    quantitySpan.textContent = quantity;
+                    updateCartItem(this.dataset.id, quantity);
+                }
+            });
+        });
+        
+        plusBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const quantitySpan = this.previousElementSibling;
+                let quantity = parseInt(quantitySpan.textContent);
+                quantity++;
+                quantitySpan.textContent = quantity;
+                updateCartItem(this.dataset.id, quantity);
+            });
+        });
+        
+        removeBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const cartItem = this.closest('.cart-item');
+                cartItem.style.opacity = '0';
+                setTimeout(() => {
+                    cartItem.remove();
+                    updateCart();
+                    
+                    // Check if cart is empty
+                    const cartItems = document.querySelectorAll('.cart-item');
+                    if (cartItems.length === 0) {
+                        document.getElementById('empty-cart-message').style.display = 'block';
+                    }
+                }, 300);
+            });
+        });
+        
+        // Update cart item
+        function updateCartItem(id, quantity) {
+            // In a real application, we would update the cart on the server
+            // For this demo, we'll just update the subtotal
+            const cartItem = document.querySelector(`.quantity-btn[data-id="${id}"]`).closest('.cart-item');
+            const priceText = cartItem.querySelector('.cart-item-details p:nth-child(3)').textContent;
+            const price = parseFloat(priceText.replace('$', ''));
+            const subtotal = price * quantity;
+            
+            cartItem.querySelector('.subtotal').textContent = `Subtotal: $${subtotal.toFixed(2)}`;
+            
+            updateCart();
+        }
+        
+        // Update cart totals
+        function updateCart() {
+            let subtotal = 0;
+            let itemCount = 0;
+            
+            document.querySelectorAll('.cart-item').forEach(item => {
+                const quantitySpan = item.querySelector('.quantity');
+                const quantity = parseInt(quantitySpan.textContent);
+                const priceText = item.querySelector('.cart-item-details p:nth-child(3)').textContent;
+                const price = parseFloat(priceText.replace('$', ''));
+                
+                subtotal += price * quantity;
+                itemCount += quantity;
+            });
+            
+            const shipping = subtotal > 0 ? 5.99 : 0;
+            const tax = subtotal * 0.08; // 8% tax rate
+            const total = subtotal + shipping + tax;
+            
+            document.querySelector('.summary-row:nth-child(1) span:last-child').textContent = `$${subtotal.toFixed(2)}`;
+            document.querySelector('.summary-row:nth-child(1) span:first-child').textContent = `Subtotal (${itemCount} item${itemCount !== 1 ? 's' : ''})`;
+            document.querySelector('.summary-row:nth-child(2) span:last-child').textContent = subtotal > 0 ? `$${shipping.toFixed(2)}` : '$0.00';
+            document.querySelector('.summary-row:nth-child(3) span:last-child').textContent = `$${tax.toFixed(2)}`;
+            document.querySelector('.summary-total span:last-child').textContent = `$${total.toFixed(2)}`;
+            
+            // Update cart count in header
+            document.getElementById('cart-count').textContent = itemCount;
+        }
+    </script>
+</body>
+</html>
